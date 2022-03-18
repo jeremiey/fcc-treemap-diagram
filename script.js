@@ -5,5 +5,17 @@ let movieData
 let canvas = d3.select('#canvas')
 
 let drawTreeMap = () => {
-  
+
 }
+
+
+d3.json(movieDataUrl).then(
+  (data, error) => {
+    if(error) {
+      console.log(error)
+    } else {
+      movieData = data.children
+      drawTreeMap()
+    }
+  }
+)
