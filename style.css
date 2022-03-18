@@ -7,6 +7,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 svg {
@@ -16,4 +17,9 @@ svg {
 #canvas {
   min-width: 1000px;
   min-height: 600px;
+}
+
+#title {
+  font-size: 45px;
+  margin-bottom: 10px;
 }
