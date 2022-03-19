@@ -80,7 +80,7 @@ let drawTreeMap = () => {
           let revenue = movie['data']['value']
     
           tooltip.html(
-            `\$ ${revenue}<br />${movie['data']['name']}`
+            `${movie['data']['name']} - \$ ${revenue}`
           )
         })
        .on('mouseout', (movie) => {
