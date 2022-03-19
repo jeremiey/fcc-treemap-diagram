@@ -82,6 +82,8 @@ let drawTreeMap = () => {
           tooltip.html(
             `${movie['data']['name']} - \$ ${revenue}`
           )
+
+          tooltip.attr('data-value', movie['data']['value'])
         })
        .on('mouseout', (movie) => {
           tooltip.transition()
