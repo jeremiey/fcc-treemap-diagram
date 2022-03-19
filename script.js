@@ -74,7 +74,7 @@ let drawTreeMap = () => {
           let revenue = movie['data']['value'].toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") // converts to thousands format
     
           tooltip.html(
-            `${movie['data']['name']} - \$ ${revenue}`
+            `\$ ${revenue}<hr />${movie['data']['name']}`
           )
 
           tooltip.attr('data-value', movie['data']['value'])
