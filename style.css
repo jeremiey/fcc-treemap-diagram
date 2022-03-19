@@ -20,3 +20,7 @@ svg {
   margin-top: 100px;
   margin-bottom: 10px;
 }
+
+#legend {
+  min-height: 300px;
+}
