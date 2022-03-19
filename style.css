@@ -24,3 +24,7 @@ svg {
 #legend {
   min-height: 300px;
 }
+
+#tooltip {
+  visibility: hidden;
+}
