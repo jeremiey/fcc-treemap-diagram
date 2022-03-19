@@ -31,12 +31,6 @@ let drawTreeMap = () => {
                     .attr('transform', (movie) => {
                       return `translate(${movie['x0']}, ${movie['y0']})`
                     })
-                    .append('text')
-                    .text((movie) => {
-                      return movie['data']['name']
-                    })
-                    .attr('x', 5)
-                    .attr('y', 30)
 
   block.append('rect')
        .attr('class', 'tile')
@@ -89,6 +83,13 @@ let drawTreeMap = () => {
           tooltip.transition()
                  .style('visibility', 'hidden')
        })
+
+  block.append('text')
+       .text((movie) => {
+          return movie['data']['name']
+       })
+       .attr('x', 5)
+       .attr('y', 30)
 
 }
 
