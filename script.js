@@ -31,12 +31,6 @@ let drawTreeMap = () => {
                     .attr('transform', (movie) => {
                       return `translate(${movie['x0']}, ${movie['y0']})`
                     })
-                    .attr('width', (movie) => {
-                      return movie['x1'] - movie['x0']
-                    })
-                    .attr('height', (movie) => {
-                      return movie['y1'] - movie['y0']
-                    })
                     .append('text')
                     .text((movie) => {
                       return movie['data']['name']
@@ -72,6 +66,12 @@ let drawTreeMap = () => {
        })
        .attr('data-value', (movie) => {
           return movie['data']['value']
+       })
+       .attr('width', (movie) => {
+          return movie['x1'] - movie['x0']
+       })
+       .attr('height', (movie) => {
+          return movie['y1'] - movie['y0']
        })
        .on('mouseover', (movie) => {
           tooltip.transition()
